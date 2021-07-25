@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'HomeController@index');
+
+Auth::routes(['register' => false]);
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/desain', 'HomeController@desain')->name('home');
+
+Route::group(['middleware' => ['web', 'auth', 'role']], function () {
+    Route::group(['role' => 'admin', 'prefix' => 'admin'], function () {
+        Route::namespace('Admin')->group(function () {
+            Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+            Route::resource('/awards', 'AwardsController');
+        });
+    });
 });
