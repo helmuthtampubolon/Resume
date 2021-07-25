@@ -1,4 +1,4 @@
-## About Laravel
+## About Resume
 
 Langkah langkah menajalankan aplikasi setelah clone repository:
 
