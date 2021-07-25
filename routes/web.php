@@ -24,6 +24,7 @@ Route::group(['middleware' => ['web', 'auth', 'role']], function () {
             Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
             Route::resource('/awards', 'AwardsController');
             Route::resource('/education', 'EducationController');
+            Route::resource('/experience', 'ExperienceController');
         });
     });
 });
