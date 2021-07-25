@@ -1,6 +1,6 @@
 @extends('admin.layout.app')
 @section('title')
-    <title>Desain</title>
+    <title>Award</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{{asset('admin/assets/extra-libs/multicheck/multicheck.css')}}">
     <link href="{{asset('admin/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css')}}" rel="stylesheet">
@@ -11,7 +11,7 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-12 d-flex no-block align-items-center">
-                <h4 class="page-title">Elements</h4>
+                <h4 class="page-title">Award</h4>
                 <div class="ms-auto text-end">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -48,7 +48,12 @@
                                     @endif
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-success text-white">Save</button>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-success text-white">Save</button>
+                                    <a href="{{route('awards.index')}}" class="btn btn-danger text-white">Back</a>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>

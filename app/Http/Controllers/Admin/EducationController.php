@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Education;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class EducationController extends Controller
      */
     public function index()
     {
-        //
+        $educations = Education::all();
+        return view('admin.content.education.index',compact('educations'));
     }
 
     /**
@@ -35,7 +37,19 @@ class EducationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'name' => 'required|max:255',
+            'status' => 'required|max:255',
+            'major' => 'required|max:255',
+            'gpa' => 'max:4',
+            'start_period' => 'required|max:7',
+            'end_period' => 'required|max:7',
+        ]);
+
+        $data = Education::create($request->all());
+
+        return redirect()->back()->with(['success'=>'Successfully Created']);
     }
 
     /**
@@ -57,7 +71,8 @@ class EducationController extends Controller
      */
     public function edit($id)
     {
-        //
+        $education = Education::find($id);
+        return view('admin.content.education.edit',compact('education'));
     }
 
     /**
@@ -80,6 +95,8 @@ class EducationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $award = Education::findOrFail($id);
+        $award->delete();
+        return redirect()->back()->with(['success'=>'Successfully Deleted']);
     }
 }

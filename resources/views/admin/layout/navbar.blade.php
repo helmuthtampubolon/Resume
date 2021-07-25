@@ -214,7 +214,7 @@
                                              href="{{route('awards.index')}}" aria-expanded="false"><i class="mdi mdi-trophy-variant"></i><span
                             class="hide-menu">Awards</span></a></li>
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                             href="{{url('lain')}}" aria-expanded="false"><i class="mdi mdi-trophy-variant"></i><span
+                                             href="{{route('education.index')}}" aria-expanded="false"><i class="fas fa-graduation-cap"></i><span
                             class="hide-menu">Education</span></a></li>
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                              href="{{url('lain')}}" aria-expanded="false"><i class="mdi mdi-trophy-variant"></i><span

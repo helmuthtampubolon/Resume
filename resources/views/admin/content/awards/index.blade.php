@@ -1,6 +1,6 @@
 @extends('admin.layout.app')
 @section('title')
-    <title>Desain</title>
+    <title>Award</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{{asset('admin/assets/extra-libs/multicheck/multicheck.css')}}">
     <link href="{{asset('admin/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css')}}" rel="stylesheet">
@@ -11,7 +11,7 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-12 d-flex no-block align-items-center">
-                <h4 class="page-title">Elements</h4>
+                <h4 class="page-title">Award</h4>
                 <div class="ms-auto text-end">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -31,7 +31,7 @@
                     Session::forget('success');
                 @endphp
             </div>
-    @endif
+        @endif
         <!-- ============================================================== -->
         <!-- Start Page Content -->
         <!-- ============================================================== -->
@@ -77,7 +77,7 @@
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            Apakah Anda Yakin Menghapus Data ini?
+                                                            Are You Sure To Delete This Data?
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary"
@@ -87,8 +87,7 @@
                                                                   method="POST">
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <button type="submit" class="btn btn-primary">Save
-                                                                    changes
+                                                                <button type="submit" class="btn btn-primary">Delete
                                                                 </button>
                                                             </form>
                                                         </div>
@@ -99,7 +98,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="3" class="text-center">Data Awards Belum Ada</td>
+                                        <td colspan="3" class="text-center">Award Data is Empty</td>
                                         <td style="display: none"></td>
                                         <td style="display: none"></td>
                                     </tr>
@@ -162,5 +161,9 @@
             language:'en-gb'
         });
         CKEDITOR.config.allowedContent = true;
+        /****************************************
+         *       Basic Table                   *
+         ****************************************/
+        $('#zero_config').DataTable();
     </script>
 @endsection
