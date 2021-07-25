@@ -119,7 +119,7 @@
                             <div class="row">
                                 <div class="col">
                                     <button type="submit" class="btn btn-success text-white">Save</button>
-                                    <a href="{{route('education.index')}}" class="btn btn-danger text-white">Back</a>
+                                    <a href="{{route('experience.index')}}" class="btn btn-danger text-white">Back</a>
                                 </div>
                             </div>
                         </form>

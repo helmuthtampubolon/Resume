@@ -239,15 +239,15 @@
                             class="hide-menu">Education</span></a></li>
                 <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link"
                                             href="{{route('experience.index')}}" aria-expanded="false"><i
-                            class="mdi mdi-account-settings-variant"></i><span
+                            class="mdi mdi-playlist-check"></i><span
                             class="hide-menu">Experience</span></a></li>
                 <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                            href="{{url('lain')}}" aria-expanded="false"><i
-                            class="mdi mdi-trophy-variant"></i><span
+                                            href="{{route('interest.index')}}" aria-expanded="false"><i
+                            class="fas fa-exclamation"></i><span
                             class="hide-menu">Interest</span></a></li>
                 <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                            href="{{url('lain')}}" aria-expanded="false"><i
-                            class="mdi mdi-trophy-variant"></i><span
+                                            href="{{route('profile.index')}}" aria-expanded="false"><i
+                            class="mdi mdi-account-settings-variant"></i><span
                             class="hide-menu">Profile</span></a></li>
                 <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link"
                                             href="{{url('lain')}}" aria-expanded="false"><i
