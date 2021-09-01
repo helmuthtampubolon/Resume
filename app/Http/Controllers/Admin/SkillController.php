@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Skills;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class SkillController extends Controller
 {
@@ -13,17 +15,8 @@ class SkillController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $skills = Skills::all();
+        return view('admin.content.skills.index',compact('skills'));
     }
 
     /**
@@ -34,18 +27,15 @@ class SkillController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $request->validate([
+            'name' => 'required|max:255',
+            'icon' => 'required|max:255',
+            'type' => 'required|max:255',
+        ]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+       Skills::create($request->all());
+
+        return redirect()->back()->with(['success'=>'Successfully Created']);
     }
 
     /**
@@ -56,7 +46,8 @@ class SkillController extends Controller
      */
     public function edit($id)
     {
-        //
+        $skill = Skills::find($id);
+        return view('admin.content.skills.edit',compact('skill'));
     }
 
     /**
@@ -68,7 +59,13 @@ class SkillController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Skills::find($id);
+        $data->name = $request->name;
+        $data->icon = $request->icon;
+        $data->type = $request->type;
+        $data->update();
+
+        return redirect()->route('skills.index')->with(['success'=>'Successfully Edited']);
     }
 
     /**
@@ -79,6 +76,8 @@ class SkillController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $skill = Skills::findOrFail($id);
+        $skill->delete();
+        return redirect()->back()->with(['success'=>'Successfully Deleted']);
     }
 }

@@ -250,7 +250,7 @@
                             class="mdi mdi-account-settings-variant"></i><span
                             class="hide-menu">Profile</span></a></li>
                 <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                            href="{{url('lain')}}" aria-expanded="false"><i
+                                            href="{{route('skills.index')}}" aria-expanded="false"><i
                             class="fas fa-cogs"></i><span
                             class="hide-menu">Skills</span></a></li>
                 <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link"
