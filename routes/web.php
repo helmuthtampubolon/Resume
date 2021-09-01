@@ -28,6 +28,7 @@ Route::group(['middleware' => ['web', 'auth', 'role']], function () {
             Route::resource('/interest', 'InterestController');
             Route::resource('/profile', 'ProfileController');
             Route::resource('/skills', 'SkillController');
+            Route::resource('/social-media', 'SocialMediaController');
         });
     });
 });

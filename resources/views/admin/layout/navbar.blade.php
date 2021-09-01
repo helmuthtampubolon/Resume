@@ -254,8 +254,8 @@
                             class="fas fa-cogs"></i><span
                             class="hide-menu">Skills</span></a></li>
                 <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                            href="{{url('lain')}}" aria-expanded="false"><i
-                            class="mdi mdi-trophy-variant"></i><span
+                                            href="{{route('social-media.index')}}" aria-expanded="false"><i
+                            class="mdi mdi-wechat"></i><span
                             class="hide-menu">Social Media</span></a></li>
             </ul>
         </nav>
