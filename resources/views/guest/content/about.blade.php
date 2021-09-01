@@ -8,7 +8,7 @@
         </h1>
         <div class="subheading mb-5">
             <!-- alamat lengkap -->
-            {{$profile->address}}
+            <?= $profile->address ?>
             <a href="mailto:name@email.com">
                 <!-- email -->
                 {{$profile->email}}

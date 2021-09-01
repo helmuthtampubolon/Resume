@@ -7,8 +7,9 @@
             <div class="flex-grow-1">
                 <h3 class="mb-0">{{$ex->title}}</h3>
                 <div class="subheading mb-3">{{$ex->role}}</div>
-                <p>
-                    {{$ex->description}}
+                <p>@php
+                    echo $ex->description;
+                    @endphp
                 </p>
             </div>
             <div class="flex-shrink-0"><span class="text-primary">{{\Carbon\Carbon::parse($ex->start_period)->format('F yy')}} - {{\Carbon\Carbon::parse($ex->end_period)->format('F yy')}}</span></div>

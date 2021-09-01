@@ -251,7 +251,7 @@
                             class="hide-menu">Profile</span></a></li>
                 <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link"
                                             href="{{url('lain')}}" aria-expanded="false"><i
-                            class="mdi mdi-trophy-variant"></i><span
+                            class="fas fa-cogs"></i><span
                             class="hide-menu">Skills</span></a></li>
                 <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link"
                                             href="{{url('lain')}}" aria-expanded="false"><i
