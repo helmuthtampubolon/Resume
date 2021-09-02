@@ -8,7 +8,7 @@
         </h1>
         <div class="subheading mb-5">
             <!-- alamat lengkap -->
-            {{$profile->address}}
+            <?= $profile->address ?>
             <a href="mailto:name@email.com">
                 <!-- email -->
                 {{$profile->email}}
@@ -21,7 +21,7 @@
         </p>
         <div class="social-icons">
             @foreach($social_media as $sm)
-            <a class="social-icon" href="{{$sm->link}}"><i class="fab {{$sm->icon}}"></i></a>
+            <a class="social-icon" href="{{$sm->link}}"><i class="{{$sm->icon}}"></i></a>
             @endforeach
         </div>
     </div>

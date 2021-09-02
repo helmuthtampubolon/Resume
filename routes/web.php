@@ -23,6 +23,12 @@ Route::group(['middleware' => ['web', 'auth', 'role']], function () {
         Route::namespace('Admin')->group(function () {
             Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
             Route::resource('/awards', 'AwardsController');
+            Route::resource('/education', 'EducationController');
+            Route::resource('/experience', 'ExperienceController');
+            Route::resource('/interest', 'InterestController');
+            Route::resource('/profile', 'ProfileController');
+            Route::resource('/skills', 'SkillController');
+            Route::resource('/social-media', 'SocialMediaController');
         });
     });
 });
