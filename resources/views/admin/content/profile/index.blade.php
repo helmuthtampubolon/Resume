@@ -152,7 +152,7 @@
                                            class="col-sm-2 text-end control-label col-form-label">Last Name</label>
                                     <div class="col-sm-10">
                                         <input type="text" name="last_name"
-                                               class="form-control{{ $errors->has('last_name') ? 'is-invalid':'' }}"
+                                               class="form-control {{ $errors->has('last_name') ? 'is-invalid':'' }}"
                                                id="last_name"
                                                value="{{$profile->last_name}}"
                                                placeholder="Last Name (Ex: Tampubolon)" required>
@@ -166,7 +166,7 @@
                                            class="col-sm-2 text-end control-label col-form-label">Address</label>
                                     <div class="col-sm-10">
                                         <input type="text" name="address"
-                                               class="form-control{{ $errors->has('address') ? 'is-invalid':'' }}"
+                                               class="form-control {{ $errors->has('address') ? 'is-invalid':'' }}"
                                                id="address"
                                                value="{{$profile->address}}"
                                                placeholder="Address (Ex: Balige, Toba, Sumatera Utara)" required>
@@ -194,7 +194,7 @@
                                            class="col-sm-2 text-end control-label col-form-label">District</label>
                                     <div class="col-sm-10">
                                         <input type="text" name="destrict"
-                                               class="form-control{{ $errors->has('destrict') ? 'is-invalid':'' }}"
+                                               class="form-control {{ $errors->has('destrict') ? 'is-invalid':'' }}"
                                                id="destrict"
                                                value="{{$profile->destrict}}"
                                                placeholder="District (Ex: Balige)" required>
@@ -208,7 +208,7 @@
                                            class="col-sm-2 text-end control-label col-form-label">City</label>
                                     <div class="col-sm-10">
                                         <input type="text" name="city"
-                                               class="form-control{{ $errors->has('city') ? 'is-invalid':'' }}"
+                                               class="form-control {{ $errors->has('city') ? 'is-invalid':'' }}"
                                                id="city"
                                                value="{{$profile->city}}"
                                                placeholder="City (Ex: Toba)" required>
@@ -222,7 +222,7 @@
                                            class="col-sm-2 text-end control-label col-form-label">Region</label>
                                     <div class="col-sm-10">
                                         <input type="text" name="region"
-                                               class="form-control{{ $errors->has('region') ? 'is-invalid':'' }}"
+                                               class="form-control {{ $errors->has('region') ? 'is-invalid':'' }}"
                                                id="region"
                                                value="{{$profile->region}}"
                                                placeholder="Region (Ex: North Sumatera)" required>
@@ -236,7 +236,7 @@
                                            class="col-sm-2 text-end control-label col-form-label">Email</label>
                                     <div class="col-sm-10">
                                         <input type="email" name="email"
-                                               class="form-control{{ $errors->has('email') ? 'is-invalid':'' }}"
+                                               class="form-control {{ $errors->has('email') ? 'is-invalid':'' }}"
                                                id="email"
                                                value="{{$profile->email}}"
                                                placeholder="example@gmail.com" required>

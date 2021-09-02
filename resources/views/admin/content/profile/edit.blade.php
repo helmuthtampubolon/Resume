@@ -61,7 +61,7 @@
                                        class="col-sm-3 text-end control-label col-form-label">Role</label>
                                 <div class="col-sm-9">
                                     <input type="text" name="role"
-                                           class="form-control{{ $errors->has('role') ? 'is-invalid':'' }}"
+                                           class="form-control {{ $errors->has('role') ? 'is-invalid':'' }}"
                                            id="role"
                                            value="{{$experience->role}}"
                                            placeholder="Role Here (Ex: Web Development Course/Backend Engineer/Frontend Engineer)" required>

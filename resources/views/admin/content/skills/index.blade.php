@@ -159,7 +159,7 @@
                                            class="col-sm-3 text-end control-label col-form-label">Icon</label>
                                     <div class="col-sm-9">
                                         <input type="text" name="icon"
-                                               class="form-control{{ $errors->has('icon') ? 'is-invalid':'' }}"
+                                               class="form-control {{ $errors->has('icon') ? 'is-invalid':'' }}"
                                                id="icon"
                                                placeholder="Icon Here (Ex: fab fa-node)" required>
                                         @if ($errors->has('icon'))
@@ -172,7 +172,7 @@
                                            class="col-sm-3 text-end control-label col-form-label">Type</label>
                                     <div class="col-sm-9">
                                         <input type="text" name="type"
-                                               class="form-control{{ $errors->has('type') ? 'is-invalid':'' }}"
+                                               class="form-control {{ $errors->has('type') ? 'is-invalid':'' }}"
                                                id="type"
                                                placeholder="Type Here (Ex: Programming Language)" required>
                                         @if ($errors->has('type'))

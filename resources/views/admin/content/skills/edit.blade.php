@@ -61,7 +61,7 @@
                                        class="col-sm-3 text-end control-label col-form-label">Icon</label>
                                 <div class="col-sm-9">
                                     <input type="text" name="icon"
-                                           class="form-control{{ $errors->has('icon') ? 'is-invalid':'' }}"
+                                           class="form-control {{ $errors->has('icon') ? 'is-invalid':'' }}"
                                            id="icon"
                                            value="{{$skill->icon}}"
                                            placeholder="Icon Here (Ex: fab fa-node)" required>
@@ -75,7 +75,7 @@
                                        class="col-sm-3 text-end control-label col-form-label">Type</label>
                                 <div class="col-sm-9">
                                     <input type="text" name="type"
-                                           class="form-control{{ $errors->has('type') ? 'is-invalid':'' }}"
+                                           class="form-control {{ $errors->has('type') ? 'is-invalid':'' }}"
                                            id="type"
                                            value="{{$skill->type}}"
                                            placeholder="Type Here (Ex: Programming Language)" required>

@@ -21,7 +21,7 @@
         </p>
         <div class="social-icons">
             @foreach($social_media as $sm)
-            <a class="social-icon" href="{{$sm->link}}"><i class="fab {{$sm->icon}}"></i></a>
+            <a class="social-icon" href="{{$sm->link}}"><i class="{{$sm->icon}}"></i></a>
             @endforeach
         </div>
     </div>
